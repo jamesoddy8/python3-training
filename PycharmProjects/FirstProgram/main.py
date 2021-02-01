@@ -22,7 +22,7 @@ print("H" + "e" + "l" + "l" + "o")
 
 print("This costs " + str(6) + " dollars")
 
-print("This costs " + str(5+9) + " dollars")
+print("This costs " + str(5 + 9) + " dollars")
 
 print("Hello:James:Amazing".split(":"))
 
@@ -47,5 +47,57 @@ print(5 == 4)
 
 print("I like " + ["Movies", "Games", "Python"][2])
 
-
 # Dictionaries
+
+# Curly braces - use to define a dictionary
+print({"name": "James", "age": "29", "hobby": "code"}["name"])
+
+# Variables
+
+greeting = "Hello World"
+print(greeting)
+
+greeting = greeting.split(" ")[0]
+print(greeting)
+
+# convert to string str()
+str(4)
+str(4.6)
+str(True)
+
+# convert to integer int() and then float() for floats or bool("True") for booleans
+print(int("4"))
+print(float("2.5"))
+print(bool("True"))
+
+# len() used to determine length of something e.g. len("Hello") = 5 or len(1, 2, 3, 4) = 4
+
+# sorted(5,4,3,2,1) = (1,2,3,4,5) sorted("J","A","M","E","S")
+# sorting puts numbers first, then capital alphabet and then lowercase
+print(sorted(["J", "A", "M", "E", "S"]))
+
+
+# start two lines down
+# CamelCase is used in python for class names MyClass
+# snake_case (separating words with underscores) is used for functions e.g. my_function()
+
+# starting a function
+#
+# def my_function():
+#     print("This is my function!")
+#     print("This is the second string.")
+#
+#
+# my_function()
+
+
+def my_function(str1, str2, str3, str4):
+    print(str1)
+    print(str2)
+    print(str3)
+    print(str4)
+
+my_function("'But I don't want to go among mad people,' Alice remarked.",
+            "'Oh, you can't help that,' said the Cat: 'we're all mad here. I'm mad. You're mad.'",
+            "'How do you know I'm mad?' said Alice.",
+            "'You must be,' said the Cat, 'or you wouldn't have come here.")
