@@ -97,7 +97,119 @@ def my_function(str1, str2, str3, str4):
     print(str3)
     print(str4)
 
+
 my_function("'But I don't want to go among mad people,' Alice remarked.",
             "'Oh, you can't help that,' said the Cat: 'we're all mad here. I'm mad. You're mad.'",
             "'How do you know I'm mad?' said Alice.",
             "'You must be,' said the Cat, 'or you wouldn't have come here.")
+
+
+# Default arguments
+
+def print_something(name, age):
+    # print("My name is " + name + " and my age is " + str(age))
+    print("My name is", name, "and my age is", age)
+
+
+# There is no need to use "+" to concatenate, using a "," works as well.
+
+
+print_something("James", 29)
+
+
+def print_something_again(name="Someone", age="Unknown"):
+    print("My name is", name, "and my age is", age)
+
+
+print_something_again("Yuki", 25)
+
+print_something_again(None, 27)
+
+
+def print_people(*people):
+    for person in people:
+        print("This person is", person)
+
+
+print_people("James", "Matthew", "Joseph", "William", "Denise")
+
+
+# asterisk tells this argument that it will be an array of all the arguments that are passed into the function
+
+
+def do_math(num1, num2):
+    return num1 + num2
+
+
+math1 = do_math(5, 7)
+math2 = do_math(11, 34)
+
+print("first sum is", math1, "and the second sum is", math2)
+
+# if / else statements
+
+
+check = "Lobster"
+
+if check == False:
+    print("It is false")
+elif check == "Lobster":
+    print("Yum, Lobster!!")
+elif check == "Yo":
+    print("Hello")
+else:
+    print("It is actually equal to true")
+
+# for / while loops
+# for loops
+
+numbers = [1, 2, 3, 4, 5]
+people = ["James", "Matthew", "Joseph", "William", "Denise"]
+
+for item in numbers:
+    print(item)
+for item in people:
+    print(item)
+
+# while loop
+
+run = True
+current = 1
+
+while run:
+    if current == 100:
+        run = False
+    else:
+        print(current)
+        current += 1
+
+# regex
+
+# > re.sub('', '', string)
+
+
+# three parameters that this sub function takes is the matches we want to make, what we want to replace them with and
+# then the string we want to manipulate
+
+# rules in regex are contained within square brackets re.sub('[A, B, C]', '', string)
+
+
+# >>> import re
+# >>> string = "We love to dance! We love to laugh!"
+# >>> print(string)
+# >>> We love to dance! We love to laugh!
+# >>> new = re.sub('[A-Z]', '', string)
+# >>> print(new)
+# >>> e love to dance! e love to laugh!
+
+# >>> new = re.sub('[a-z]', '', string)
+# >>> print(new)
+# >>> W   ! W   !
+
+
+# in rules \ is used to escape the quote
+# >>> new = re.sub('[.!,\']', '', string)
+# >>> print(new)
+# >>> We love to dance We love to laugh
+
+
