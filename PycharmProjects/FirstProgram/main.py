@@ -212,4 +212,17 @@ while run:
 # >>> print(new)
 # >>> We love to dance We love to laugh
 
+# you can combine these [.,\'a-zA-Z] to remove all the letters (but not the spaces)
 
+# for spaces you use +" " within the rules so...
+# new = re.sub('[" "]', '', string) or [a-z+" "]
+# print(new)
+# Welovetodance!Welovetolaugh!
+
+# if you want to do this for a string with numbers included...
+
+# >>> print(string)
+# We love to dance! We love to laugh!37 - 678
+# >>> new = re.sub('[^0-9]', '', string)
+# >>> print(new)
+# >>> 37678
